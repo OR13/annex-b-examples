@@ -157,7 +157,7 @@ async function main() {
     },
     state,
     nonce,
-    "client_id":"example.com ",
+    "client_id":"example.com",
     "client_id_scheme":"x509_san_dns",
     "response_mode":"direct_post.jwt",
     "response_uri":"https://example.com/12345/response"

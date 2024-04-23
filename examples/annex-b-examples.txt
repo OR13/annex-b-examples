@@ -136,9 +136,9 @@ Example: Ephemeral Private Reader Key JWK
   "kid": "P8p0virRlh6fAkh5-YSeHt4EIv-hFGneYk14d8DF51w"
 }
 
------------------------------------------------------
-Example: Ephemeral Public Reader Key JWK (Encryption)
------------------------------------------------------
+----------------------------------------
+Example: Ephemeral Public Reader Key JWK
+----------------------------------------
 {
   "kty": "EC",
   "use": "enc",
@@ -147,18 +147,6 @@ Example: Ephemeral Public Reader Key JWK (Encryption)
   "y": "-5-QtFqJqGwOjEL3Ut89nrE0MeaUp5RozksKHpBiyw0",
   "alg": "ECDH-ES",
   "kid": "P8p0virRlh6fAkh5-YSeHt4EIv-hFGneYk14d8DF51w"
-}
-
-----------------------------------------------
-Example: Ephemeral Public Reader Key JWK (MAC)
-----------------------------------------------
-{
-  "kty": "EC",
-  "use": "enc",
-  "crv": "P-256",
-  "x": "f83OJ3D2L7bH0tVbHQWPrGA7G6r83jBim-WPIszqhYk",
-  "y": "x_FEzRu9LsY12dnG1mFpvUQ1S_7kRm0gBtDWFis2Jtk",
-  "kid": "2gPa-FaaazQqyeoyClogHYGwGVF67Cb3FcbhVPjQViM"
 }
 
 ------------------------------------------------

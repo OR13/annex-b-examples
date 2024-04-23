@@ -214,7 +214,7 @@ async function main() {
     vp_token
   };
 
-  const mdoc_generated_nonce = "1234567890abcdefg!";
+  const mdoc_generated_nonce = "1234567890abcdefgh";
   const authz_response_object_jwt = await generate_authz_response_object_jwt(
     authz_response_parameters, mdoc_generated_nonce, nonce, ephemeral_public_key_reader);
 
@@ -228,12 +228,12 @@ async function main() {
 
   // -------
   // OID4VPHandover and SessionTranscriopt using the following params:
-  // mdoc_generated_nonce = "1234567890abcdefg!"
+  // mdoc_generated_nonce = "1234567890abcdefgh"
   // client_id = "example.com".
   // response_uri = "https://example.com/12345/response"
-  // nonce = "abcdef12345677890!"
-  const oid4vp_handover_hex = "835820FEE51F1F203F8AB58B06D0C886620FD1638613DE7BC305420E06F00AB4C00F41582073E9B8C778BC6D2CE5BDF967AE8348055658424B1D2DC7FC52BCC4BF3E619ADB72616263646566313233343536373738393021";
-  const session_transcript_hex = "83F6F6835820FEE51F1F203F8AB58B06D0C886620FD1638613DE7BC305420E06F00AB4C00F41582073E9B8C778BC6D2CE5BDF967AE8348055658424B1D2DC7FC52BCC4BF3E619ADB72616263646566313233343536373738393021";
+  // nonce = "abcdefgh1234567890"
+  const oid4vp_handover_hex = "835820DA25C527E5FB75BC2DD31267C02237C4462BA0C1BF37071F692E7DD93B10AD0B5820F6ED8E3220D3C59A5F17EB45F48AB70AEECF9EE21744B1014982350BD96AC0C572616263646566676831323334353637383930";
+  const session_transcript_hex = "83F6F6835820DA25C527E5FB75BC2DD31267C02237C4462BA0C1BF37071F692E7DD93B10AD0B5820F6ED8E3220D3C59A5F17EB45F48AB70AEECF9EE21744B1014982350BD96AC0C572616263646566676831323334353637383930";
   // -------
 
   console.log("----------------");

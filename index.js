@@ -153,15 +153,15 @@ async function main() {
         "mso_mdoc":{
           "alg":[ "ES256", "ES384", "ES512", "EdDSA", "ESB256", "ESB320", "ESB384", "ESB512" ]
         }
-      }
+      },
+      "require_signed_request_object":true
     },
     state,
     nonce,
     "client_id":"example.com",
     "client_id_scheme":"x509_san_dns",
     "response_mode":"direct_post.jwt",
-    "response_uri":"https://example.com/12345/response",
-    "require_signed_request_object":true
+    "response_uri":"https://example.com/12345/response"    
   };
 
   const authz_request_jwt_header = {

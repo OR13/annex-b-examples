@@ -135,6 +135,15 @@ async function main() {
     "kid":"P8p0virRlh6fAkh5-YSeHt4EIv-hFGneYk14d8DF51w"
   };
 
+  const ephemeral_public_key_reader_mac = {
+    "kty":"EC",
+    "use":"enc",
+    "crv":"P-256",
+    "x":"f83OJ3D2L7bH0tVbHQWPrGA7G6r83jBim-WPIszqhYk",
+    "y":"x_FEzRu9LsY12dnG1mFpvUQ1S_7kRm0gBtDWFis2Jtk",
+    "kid":"2gPa-FaaazQqyeoyClogHYGwGVF67Cb3FcbhVPjQViM"
+  }
+
   const nonce = "abcdef12345677890!";
   const state = "34asfd34_34$34";
   const authz_request_parameters = {
@@ -144,7 +153,8 @@ async function main() {
     "client_metadata":{
       "jwks":{
         "keys":[
-          ephemeral_public_key_reader
+          ephemeral_public_key_reader,
+          ephemeral_public_key_reader_mac,
         ]
       },
       "authorization_encrypted_response_alg":"ECDH-ES",
@@ -245,10 +255,15 @@ async function main() {
   console.log("-----------------------------------------");
   console.log(JSON.stringify(ephemeral_private_key_reader, null, 2));
 
-  console.log("-----------------------------------------");
-  console.log("Example: Ephemeral Public Reader Key JWK");
-  console.log("-----------------------------------------");
+  console.log("-----------------------------------------------------");
+  console.log("Example: Ephemeral Public Reader Key JWK (Encryption)");
+  console.log("-----------------------------------------------------");
   console.log(JSON.stringify(ephemeral_public_key_reader, null, 2));
+
+  console.log("----------------------------------------------");
+  console.log("Example: Ephemeral Public Reader Key JWK (MAC)");
+  console.log("----------------------------------------------");
+  console.log(JSON.stringify(ephemeral_public_key_reader_mac, null, 2));
 
   console.log("------------------------------------------------");
   console.log("Example: Authorization Request Object parameters");

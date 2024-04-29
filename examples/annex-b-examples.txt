@@ -153,7 +153,6 @@ Example: Ephemeral Public Reader Key JWK
 Example: Authorization Request Object parameters
 ------------------------------------------------
 {
-
   "aud": "https://self-issued.me/v2",
   "response_type": "vp_token",
   "presentation_definition": {

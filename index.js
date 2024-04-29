@@ -1,6 +1,5 @@
 const { default: base64url } = require('base64url');
 const jose = require('node-jose');
-// const fs = require('fs');
 
 async function main() {
 
@@ -211,7 +210,7 @@ async function main() {
   const authz_response_jwt_header = JSON.parse(base64url.decode(authz_response_object_jwt.split('.')[0]));
 
   const ephemeral_private_key_mdoc = {
-     // TBD: needs to be read from memory via debugger
+     // In node-jose:encrypt.js: line 196: in the debug console, do console.log(JSON.stringify(epk.toJSON(true, ["kid"]), null, 2))
   };
 
   const ephemeral_public_key_mdoc = authz_response_jwt_header.epk;
@@ -302,8 +301,8 @@ async function main() {
 
   console.log("--------------------------------------");
   console.log("Example: Ephemeral Private MDOC Key JWK");
-  console.log("--------------------------------------");
-  console.log("In node-jose:encrypt.js: line 196: print the following expresssion: JSON.stringify(epk.toJSON(true, [\"kid\"]), null, 2) ");
+  console.log("--------------------------------------");  
+  console.log("In node-jose:encrypt.js: line 196: in the debug console, do console.log(JSON.stringify(epk.toJSON(true, [\"kid\"]), null, 2))");
 
   console.log("-----------------------------------------------------------");
   console.log("Example: OID4VPHandover CBOR Hex");
